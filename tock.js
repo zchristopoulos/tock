@@ -212,6 +212,14 @@ if ( typeof Function.prototype.bind != 'function' ) {
   };
 
   /**
+   * Get the current status of timer.
+   * @return {Boolean} Current tock status (via this.go)
+   */
+  Tock.prototype.isCounting = function(){
+    return this.go;
+  };
+
+  /**
    * Format milliseconds as a MM:SS.ms string.
    * @param  {Integer} ms Number of milliseconds
    * @return {String}     String representation of ms in format MM:SS:ms
